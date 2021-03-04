@@ -4,7 +4,7 @@ const router                   = require('express').Router();
 const jwt                      = require('jsonwebtoken');
 const {check,validationResult} = require('express-validator/check');
 const {validate}               = require('../utils/passwords');
-const {app_secret}             = require("../config.json");
+const {app_secret}             = require('../config.json');
 
 const loginValidator = [check('email').isEmail(),check('password').isLength({min:5})];
 router.post('/login',loginValidator, async (req,res)=>{
