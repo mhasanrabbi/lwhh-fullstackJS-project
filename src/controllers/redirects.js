@@ -19,7 +19,7 @@ router.post('/api/v1/redirects',entryValidator,rejectInvalid,async (req,res,next
     }
     else{
         res.json({
-            message:"Direction creted Successfully",
+            message:"Direction created Successfully",
             hash
         })
     }
